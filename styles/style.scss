@@ -21,6 +21,12 @@
     
 }
 
+@mixin background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 //general styles
 
 .title-container > h1{
@@ -32,7 +38,6 @@
     width: 100vw;
     height: 40vh;
     background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/book-pic.jpg);
-    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,4 +73,42 @@ cursor: pointer;
 
 .title-container{
     @include flex-center()
+}
+
+//section
+
+.books{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    background: #141518;
+}
+
+.book-card{
+    width: 30vw;
+    height: 45vh;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.book-pic{
+    height: 70%;
+    width: 100%;
+    background: url(../images/book-cover.jpg);
+    @include background();
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.book-desc{
+    @include flex-column();
+    margin-top: 5px;
+    gap: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.desc {
+    font-weight: 800;
 }
