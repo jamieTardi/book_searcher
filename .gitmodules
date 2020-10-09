@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"] 
+  path = book_searcher
+  url = https://github.com/jamieTardi/book_searcher.git

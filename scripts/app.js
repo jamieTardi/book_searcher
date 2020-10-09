@@ -30,28 +30,37 @@ async function stuff() {
         fetchLink
     );
     for(let i = 0; i < data.items.length; i++){
-        console.log(data.items[i].volumeInfo)
-        let newBackground = data.items[i].volumeInfo.imageLinks.thumbnail
-        console.log(newBackground)
+        console.log(data.items)
+        try {
+            let newBackground = data.items[i].volumeInfo.imageLinks.thumbnail;
         books.appendChild(newDiv)
-        books.style.display = 'flex'
         newDiv.classList.add('book-parent')
         newDiv.innerHTML += `
-        <div class="book-card">
-        <div class="book-pic" style="background: url(${newBackground}); background-size: cover"></div>
+        <div class="book-card scroller">
+        <div class="book-pic" style="background: url(${newBackground}); background-size: cover; background-position: center"></div>
         <div class="book-desc">
         <p class="author "><span class="desc">Author:</span> <span class="author-name">${data.items[i].volumeInfo.authors[0]}</span></p>
         <p class="name "><span class="desc">Book name: </span><span class="book-name">${data.items[i].volumeInfo.title}</span></p>
-                <p class="type "><span class="desc">Type: </span><span class="type-name"></span></p>
+                <p class="type "><span class="desc">Type: </span><span class="type-name">${data.items[i].volumeInfo.categories[0]}</span></p>
+                <p class="description"><span class="desc">Description: </span><span class="type-name" style="font-size: 10px">${data.items[i].volumeInfo.description}</span></p>
         </div>
         </div>
         `
+    }
+    catch{
+        console.log('error')
+    }
+    
         
         
     }
 
 }
 
+clear = () => {
+    newDiv.innerHTML =''
+    searchInput.value=''
+}
 
 
 
@@ -59,15 +68,6 @@ submitBtn.addEventListener('click', () => {
     searchRtn = searchInput.value
     console.log(searchRtn)
     stuff()
+    clear()
 })
 
-// let newBackground = data.items[0].volumeInfo.imageLinks.thumbnail
-    // console.log(data)
-    // console.log(data.items[0].volumeInfo)
-    // bookCard.classList.remove('hide')
-    // author.innerHTML = data.items[0].volumeInfo.authors[0]
-    // bookType.innerHTML = data.items[0].volumeInfo.categories[0]
-    // bookPic.style.background = `url('${newBackground}')`;
-    // bookPic.style.backgroundRepeat = 'none'
-    // bookPic.style.backgroundSize = 'cover'
-    // bookDesc.innerHTML = data.items[0].volumeInfo.title

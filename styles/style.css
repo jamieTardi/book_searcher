@@ -115,15 +115,19 @@ html {
 }
 
 .book-card {
+  min-width: 25vw;
   max-width: 25vw;
-  height: 65vh;
+  height: 85vh;
   background-color: #eeeeee;
   border-radius: 5px;
   margin: 2rem;
+  overflow-y: scroll;
+  scrollbar-color: red;
+  scrollbar-width: thin;
 }
 
 .book-pic {
-  height: 60%;
+  height: 40%;
   width: 100%;
   background-size: cover;
   background-repeat: none;
