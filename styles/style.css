@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  background: #141518;
+}
+
 .title-container > h1 {
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -81,7 +85,7 @@
 
 .books {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,19 +96,37 @@
   background: #141518;
 }
 
+.book-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hide {
+  display: none;
+}
+
 .book-card {
-  width: 30vw;
-  height: 45vh;
+  max-width: 25vw;
+  height: 65vh;
   background-color: #eeeeee;
   border-radius: 5px;
+  margin: 2rem;
 }
 
 .book-pic {
-  height: 70%;
+  height: 60%;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: none;
   background-color: #eeeeee;
   border-radius: 5px;
 }

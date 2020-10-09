@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    background: #141518;
+}
 
 //variables
 
@@ -79,24 +82,37 @@ cursor: pointer;
 
 .books{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     padding-top: 2rem;
     background: #141518;
+    
+    
+}
+
+.book-parent{
+    @include flex-center();
+    flex-wrap: wrap;
+}
+
+.hide{
+    display: none;
 }
 
 .book-card{
-    width: 30vw;
-    height: 45vh;
+    max-width: 25vw;
+    height: 65vh;
     background-color: #eeeeee;
     border-radius: 5px;
+    margin: 2rem;
 }
 
 .book-pic{
-    height: 70%;
+    height: 60%;
     width: 100%;
-    @include background();
+    background-size: cover;
+    background-repeat: none;
     background-color: #eeeeee;
     border-radius: 5px;
 }
