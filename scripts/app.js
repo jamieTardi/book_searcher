@@ -39,10 +39,10 @@ async function stuff() {
         <div class="book-card scroller">
         <div class="book-pic" style="background: url(${newBackground}); background-size: cover; background-position: center"></div>
         <div class="book-desc">
-        <p class="author "><span class="desc">Author:</span> <span class="author-name">${data.items[i].volumeInfo.authors[0]}</span></p>
-        <p class="name "><span class="desc">Book name: </span><span class="book-name">${data.items[i].volumeInfo.title}</span></p>
-                <p class="type "><span class="desc">Type: </span><span class="type-name">${data.items[i].volumeInfo.categories[0]}</span></p>
-                <p class="description"><span class="desc">Description: </span><span class="type-name" style="font-size: 10px">${data.items[i].volumeInfo.description}</span></p>
+        <p class="author line-space"><span class="desc">Author:</span> <span class="author-name">${data.items[i].volumeInfo.authors[0]}</span></p>
+        <p class="name line-space"><span class="desc">Book name: </span><span class="book-name">${data.items[i].volumeInfo.title}</span></p>
+                <p class="type line-space"><span class="desc">Type: </span><span class="type-name">${data.items[i].volumeInfo.categories[0]}</span></p>
+                <p class="description line-space"><span class="desc">Description: </span><span class="type-name" style="font-size: 10px">${data.items[i].volumeInfo.description}</span></p>
         </div>
         </div>
         `
